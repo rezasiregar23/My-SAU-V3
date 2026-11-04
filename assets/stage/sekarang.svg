@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="sekarang" filter="url(#filter0_d_0_563)">
+<circle cx="13" cy="13" r="5" fill="#F0A35E"/>
+</g>
+<defs>
+<filter id="filter0_d_0_563" x="0" y="0" width="26" height="26" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="4"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.941176 0 0 0 0 0.639216 0 0 0 0 0.368627 0 0 0 0.7 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_563"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_563" result="shape"/>
+</filter>
+</defs>
+</svg>

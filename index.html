@@ -11,44 +11,54 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/motion.css" />
+  <script src="js/fit.js"></script>
 </head>
 <body>
-  <div class="aurora" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true">
+    <img class="light bg-l1" src="assets/stage/light-1.svg" alt="" />
+    <img class="light bg-l2" src="assets/stage/light-2.svg" alt="" />
+    <img class="light bg-l3" src="assets/stage/light-3.svg" alt="" />
+    <img class="light bg-l4" src="assets/stage/light-4.svg" alt="" />
+    <img class="light bg-l5" src="assets/stage/light-5.svg" alt="" />
+  </div>
 
-  <aside class="sidebar glass" aria-label="Navigasi utama">
-    <a class="logo" href="#/beranda" aria-label="MySAU beranda">SAU</a>
-    <nav class="side-nav" id="sideNav"></nav>
-    <button class="side-btn side-help" type="button" aria-label="Bantuan" data-action="help"></button>
-  </aside>
+  <div class="frame" id="frame">
+    <aside class="sidebar glass" aria-label="Navigasi utama">
+      <a class="logo" href="#/beranda" aria-label="MySAU beranda">SAU</a>
+      <nav class="side-nav" id="sideNav"></nav>
+      <button class="side-btn side-help" type="button" aria-label="Bantuan" data-action="help"></button>
+    </aside>
 
-  <header class="topbar">
-    <a class="brand" href="#/beranda">My<span>SAU</span></a>
-    <div class="search" id="search">
-      <span class="search-ic" data-icon="search"></span>
-      <input id="searchInput" type="search" placeholder="Cari aplikasi, task, pengumuman, atau rekan kerja…" autocomplete="off" aria-label="Cari" />
-      <kbd>⌘K</kbd>
-      <div class="popover search-results" id="searchResults" hidden></div>
-    </div>
-    <div class="top-actions">
-      <button class="icon-btn glass" type="button" id="bellBtn" aria-label="Notifikasi" aria-haspopup="true">
-        <span data-icon="bell"></span><i class="dot"></i>
-      </button>
-      <div class="popover notif-pop" id="notifPop" hidden></div>
-      <button class="profile glass" type="button" id="profileBtn" aria-haspopup="true">
-        <span class="avatar">SY</span>
-        <span class="profile-txt"><b id="profileName">Siyono</b><small id="profileRole">Dept. Head · Divisi Teknologi Informasi</small></span>
-        <span data-icon="chevDown"></span>
-      </button>
-      <div class="popover profile-pop" id="profilePop" hidden></div>
-    </div>
-  </header>
+    <header class="topbar">
+      <a class="brand" href="#/beranda">My<span>SAU</span></a>
+      <div class="search" id="search">
+        <span class="search-ic" data-icon="search"></span>
+        <input id="searchInput" type="search" placeholder="Cari aplikasi, task, pengumuman, atau rekan kerja…" autocomplete="off" aria-label="Cari" />
+        <kbd>⌘K</kbd>
+        <div class="popover search-results" id="searchResults" hidden></div>
+      </div>
+      <div class="top-actions">
+        <button class="icon-btn glass" type="button" id="bellBtn" aria-label="Notifikasi" aria-haspopup="true">
+          <span data-icon="bell"></span><i class="dot fx-bell-dot"></i>
+        </button>
+        <div class="popover notif-pop" id="notifPop" hidden></div>
+        <button class="profile glass" type="button" id="profileBtn" aria-haspopup="true">
+          <span class="avatar">SY</span>
+          <span class="profile-txt"><b id="profileName">Siyono</b><small id="profileRole">Dept. Head · Divisi Teknologi Informasi</small></span>
+          <span data-icon="chevDown"></span>
+        </button>
+        <div class="popover profile-pop" id="profilePop" hidden></div>
+      </div>
+    </header>
 
-  <main id="app" class="page-outlet" tabindex="-1"></main>
+    <main id="app" class="page-outlet" tabindex="-1"></main>
 
-  <nav class="tabbar glass" id="tabbar" aria-label="Halaman"></nav>
+    <nav class="tabbar glass" id="tabbar" aria-label="Halaman"></nav>
 
-  <div class="toast-wrap" id="toasts" aria-live="polite"></div>
-  <div class="modal-root" id="modalRoot"></div>
+    <div class="toast-wrap" id="toasts" aria-live="polite"></div>
+    <div class="modal-root" id="modalRoot"></div>
+  </div>
 
   <noscript><p class="noscript">MySAU membutuhkan JavaScript untuk berjalan.</p></noscript>
   <script type="module" src="js/main.js"></script>

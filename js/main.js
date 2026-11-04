@@ -38,6 +38,8 @@ function render({ focus = false } = {}) {
   const page = PAGES[r];
   const scrolls = [...app.querySelectorAll('.scroll')].map((el) => el.scrollTop);
   renderShell(r);
+  // animasi Beranda = satu timeline 12 detik; offset ini menjaga fasenya tetap jalan saat render ulang
+  app.style.setProperty('--tl', `${(-(performance.now() % 12000) / 1000).toFixed(3)}s`);
   app.innerHTML = page.render();
   app.dataset.page = r;
   page.bind(app, () => render());

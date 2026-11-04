@@ -12,19 +12,27 @@ Dibuat dengan HTML, CSS, dan JavaScript murni (ES modules), tanpa build step, ja
 | `#/kalender` | Tampilan **Bulan / Minggu / Hari**, kalender mini, filter "Kalender saya", detail agenda, task hari ini, dan modal **Buat agenda** (Event & Task) |
 
 Fitur lain: pencarian global (`⌘K` / `Ctrl+K`), notifikasi, menu profil, toast dengan "Urungkan", dan penyimpanan lokal (absensi, task selesai, agenda/task baru) lewat `localStorage`.
-Tampilan dirancang untuk satu layar 1440×900 dan tetap rapi di tablet & HP.
+
+### Satu layar, tanpa scroll
+Semua halaman digambar di kanvas 1440×900 seperti frame Figma. Di desktop & laptop (lebar ≥ 1000px, landscape) `js/fit.js` menskalakan kanvas itu agar selalu muat satu layar tanpa scroll, berapa pun resolusinya. Lebar kanvas selalu 100% layar. Layar yang lebih lebar dari 16:10 memperpanjang kanvas ke samping, sedangkan layar yang lebih tinggi memperpanjangnya ke bawah sampai 1100. Di HP & tablet portrait dipakai layout responsif biasa.
+
+### Animasi
+Animasi Beranda (cahaya latar, glow & riak, orbit berputar, kilau kuning, maskot melayang, melambai & berkedip, chip melayang, lonceng berdering, ikon matahari, titik "sekarang" di absensi) ada di `css/motion.css`. File ini dibuat otomatis dari keyframe Figma "MySAU · Beranda v9" (node `75:622`), yaitu satu timeline 12 detik yang berulang. Maskot disusun berlapis (badan, lengan, mata) dari aset Figma di `assets/stage/`. Animasi otomatis mati bila pengguna memilih *reduce motion*.
 
 ## Struktur
 
 ```
-index.html          shell: sidebar, header, tab bar
+index.html          shell: sidebar, header, tab bar (dibungkus .frame)
 css/style.css       token warna, glass, layout semua halaman, responsif
+css/motion.css      animasi Beranda (dari keyframe Figma)
+js/fit.js           skala 1 layar seperti prototype Figma
 js/main.js          router (#/beranda, #/task, #/kalender) & shell
 js/store.js         state + localStorage + selector
 js/data.js          CONTOH DATA (task, agenda, aplikasi, profil) — ganti dengan API
 js/ui.js            toast, popover, pencarian, modal Buat agenda
 js/pages/*.js       Beranda, Task, Kalender
-assets/             maskot & favicon
+assets/             favicon
+assets/stage/       aset Figma: maskot berlapis, orbit, kilau, cahaya latar
 ```
 
 ## Menjalankan di komputer

@@ -1,0 +1,1235 @@
+/* ==========================================================================
+   MySAU v3 — animasi Beranda
+   Dibuat otomatis dari keyframe Figma "MySAU · Beranda v9" (node 75:622):
+   satu timeline 12 detik yang berulang. Jangan edit manual; perbarui dari Figma.
+   --tl  : offset timeline (diset JS) agar animasi tidak "lompat" saat halaman render ulang.
+   ========================================================================== */
+@property --motion-rotate { syntax: '<number>'; initial-value: 0; inherits: false; }
+@property --motion-scale-x { syntax: '<number>'; initial-value: 1; inherits: false; }
+@property --motion-scale-y { syntax: '<number>'; initial-value: 1; inherits: false; }
+@property --motion-translate-x { syntax: '<number>'; initial-value: 0; inherits: false; }
+@property --motion-translate-y { syntax: '<number>'; initial-value: 0; inherits: false; }
+
+/* Background · light 1 — Figma 75:624 */
+.bg-l1 {
+  --motion-translate-x: 0;
+  --motion-translate-y: 0;
+  transform: translate(calc(var(--motion-translate-x) * 1px), calc(var(--motion-translate-y) * 1px));
+  transform-origin: 0 0;
+  animation-name: bg-l1-tx, bg-l1-ty;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes bg-l1-tx {
+  0% { animation-timing-function: ease-in-out; --motion-translate-x: 0; }
+  50% { animation-timing-function: ease-in-out; --motion-translate-x: 40; }
+  100% { --motion-translate-x: 0; }
+}
+@keyframes bg-l1-ty {
+  0% { animation-timing-function: ease-in-out; --motion-translate-y: 0; }
+  50% { animation-timing-function: ease-in-out; --motion-translate-y: 20; }
+  100% { --motion-translate-y: 0; }
+}
+
+/* Background · light 2 — Figma 75:625 */
+.bg-l2 {
+  --motion-translate-x: 0;
+  --motion-translate-y: 0;
+  transform: translate(calc(var(--motion-translate-x) * 1px), calc(var(--motion-translate-y) * 1px));
+  transform-origin: 0 0;
+  animation-name: bg-l2-tx, bg-l2-ty;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes bg-l2-tx {
+  0% { animation-timing-function: ease-in-out; --motion-translate-x: 0; }
+  50% { animation-timing-function: ease-in-out; --motion-translate-x: -30; }
+  100% { --motion-translate-x: 0; }
+}
+@keyframes bg-l2-ty {
+  0% { animation-timing-function: ease-in-out; --motion-translate-y: 0; }
+  50% { animation-timing-function: ease-in-out; --motion-translate-y: 30; }
+  100% { --motion-translate-y: 0; }
+}
+
+/* Background · light 3 — Figma 75:626 */
+.bg-l3 {
+  --motion-translate-x: 0;
+  --motion-translate-y: 0;
+  transform: translate(calc(var(--motion-translate-x) * 1px), calc(var(--motion-translate-y) * 1px));
+  transform-origin: 0 0;
+  animation-name: bg-l3-tx, bg-l3-ty;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes bg-l3-tx {
+  0% { animation-timing-function: ease-in-out; --motion-translate-x: 0; }
+  50% { animation-timing-function: ease-in-out; --motion-translate-x: 35; }
+  100% { --motion-translate-x: 0; }
+}
+@keyframes bg-l3-ty {
+  0% { animation-timing-function: ease-in-out; --motion-translate-y: 0; }
+  50% { animation-timing-function: ease-in-out; --motion-translate-y: -25; }
+  100% { --motion-translate-y: 0; }
+}
+
+/* Background · light 4 — Figma 75:627 */
+.bg-l4 {
+  --motion-translate-x: 0;
+  --motion-translate-y: 0;
+  transform: translate(calc(var(--motion-translate-x) * 1px), calc(var(--motion-translate-y) * 1px));
+  transform-origin: 0 0;
+  animation-name: bg-l4-tx, bg-l4-ty;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes bg-l4-tx {
+  0% { animation-timing-function: ease-in-out; --motion-translate-x: 0; }
+  50% { animation-timing-function: ease-in-out; --motion-translate-x: -30; }
+  100% { --motion-translate-x: 0; }
+}
+@keyframes bg-l4-ty {
+  0% { animation-timing-function: ease-in-out; --motion-translate-y: 0; }
+  50% { animation-timing-function: ease-in-out; --motion-translate-y: -30; }
+  100% { --motion-translate-y: 0; }
+}
+
+/* Background · light 5 — Figma 75:628 */
+.bg-l5 {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-scale-x: 1;
+  --motion-scale-y: 1;
+  --motion-translate-x: 0;
+  --motion-translate-y: 0;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) translate(calc(var(--motion-translate-x) * 1px), calc(var(--motion-translate-y) * 1px)) scale(var(--motion-scale-x), var(--motion-scale-y)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: bg-l5-sx, bg-l5-sy, bg-l5-tx, bg-l5-ty;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes bg-l5-sx {
+  0% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  50% { animation-timing-function: ease-in-out; --motion-scale-x: 1.12; }
+  100% { --motion-scale-x: 1; }
+}
+@keyframes bg-l5-sy {
+  0% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  50% { animation-timing-function: ease-in-out; --motion-scale-y: 1.12; }
+  100% { --motion-scale-y: 1; }
+}
+@keyframes bg-l5-tx {
+  0% { animation-timing-function: ease-in-out; --motion-translate-x: 0; }
+  50% { animation-timing-function: ease-in-out; --motion-translate-x: 25; }
+  100% { --motion-translate-x: 0; }
+}
+@keyframes bg-l5-ty {
+  0% { animation-timing-function: ease-in-out; --motion-translate-y: 0; }
+  50% { animation-timing-function: ease-in-out; --motion-translate-y: 15; }
+  100% { --motion-translate-y: 0; }
+}
+
+/* Panggung · glow — Figma 75:767 */
+.st-glow {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-scale-x: 1.07;
+  --motion-scale-y: 1.07;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) scale(var(--motion-scale-x), var(--motion-scale-y)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: st-glow-sx, st-glow-sy, st-glow-o;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes st-glow-sx {
+  0% { animation-timing-function: ease-in-out; --motion-scale-x: 1.07; }
+  16.667% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  33.333% { animation-timing-function: ease-in-out; --motion-scale-x: 1.07; }
+  50% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  66.667% { animation-timing-function: ease-in-out; --motion-scale-x: 1.07; }
+  83.333% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  100% { --motion-scale-x: 1.07; }
+}
+@keyframes st-glow-sy {
+  0% { animation-timing-function: ease-in-out; --motion-scale-y: 1.07; }
+  16.667% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  33.333% { animation-timing-function: ease-in-out; --motion-scale-y: 1.07; }
+  50% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  66.667% { animation-timing-function: ease-in-out; --motion-scale-y: 1.07; }
+  83.333% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  100% { --motion-scale-y: 1.07; }
+}
+@keyframes st-glow-o {
+  0% { animation-timing-function: ease-in-out; opacity: 1; }
+  16.667% { animation-timing-function: ease-in-out; opacity: 0.8; }
+  33.333% { animation-timing-function: ease-in-out; opacity: 1; }
+  50% { animation-timing-function: ease-in-out; opacity: 0.8; }
+  66.667% { animation-timing-function: ease-in-out; opacity: 1; }
+  83.333% { animation-timing-function: ease-in-out; opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+/* Panggung · riak B — Figma 119:2048 */
+.st-riak-b {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-scale-x: 1.54;
+  --motion-scale-y: 1.54;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) scale(var(--motion-scale-x), var(--motion-scale-y)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: st-riak-b-sx, st-riak-b-sy, st-riak-b-o;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes st-riak-b-sx {
+  0% { animation-timing-function: ease-out; --motion-scale-x: 1.54; }
+  16.333% { animation-timing-function: step-end; --motion-scale-x: 1.62; }
+  16.667% { animation-timing-function: ease-out; --motion-scale-x: 1; }
+  49.667% { animation-timing-function: step-end; --motion-scale-x: 1.62; }
+  50% { animation-timing-function: ease-out; --motion-scale-x: 1; }
+  83% { animation-timing-function: step-end; --motion-scale-x: 1.62; }
+  83.333% { animation-timing-function: ease-out; --motion-scale-x: 1; }
+  100% { --motion-scale-x: 1.54; }
+}
+@keyframes st-riak-b-sy {
+  0% { animation-timing-function: ease-out; --motion-scale-y: 1.54; }
+  16.333% { animation-timing-function: step-end; --motion-scale-y: 1.62; }
+  16.667% { animation-timing-function: ease-out; --motion-scale-y: 1; }
+  49.667% { animation-timing-function: step-end; --motion-scale-y: 1.62; }
+  50% { animation-timing-function: ease-out; --motion-scale-y: 1; }
+  83% { animation-timing-function: step-end; --motion-scale-y: 1.62; }
+  83.333% { animation-timing-function: ease-out; --motion-scale-y: 1; }
+  100% { --motion-scale-y: 1.54; }
+}
+@keyframes st-riak-b-o {
+  0% { animation-timing-function: ease-out; opacity: 0.1; }
+  16.333% { animation-timing-function: step-end; opacity: 0; }
+  16.667% { animation-timing-function: ease-out; opacity: 0.8; }
+  49.667% { animation-timing-function: step-end; opacity: 0; }
+  50% { animation-timing-function: ease-out; opacity: 0.8; }
+  83% { animation-timing-function: step-end; opacity: 0; }
+  83.333% { animation-timing-function: ease-out; opacity: 0.8; }
+  100% { opacity: 0.1; }
+}
+
+/* Panggung · riak A — Figma 119:2047 */
+.st-riak-a {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-scale-x: 1;
+  --motion-scale-y: 1;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) scale(var(--motion-scale-x), var(--motion-scale-y)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: st-riak-a-sx, st-riak-a-sy, st-riak-a-o;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes st-riak-a-sx {
+  0% { animation-timing-function: ease-out; --motion-scale-x: 1; }
+  33% { animation-timing-function: step-end; --motion-scale-x: 1.62; }
+  33.333% { animation-timing-function: ease-out; --motion-scale-x: 1; }
+  66.333% { animation-timing-function: step-end; --motion-scale-x: 1.62; }
+  66.667% { animation-timing-function: ease-out; --motion-scale-x: 1; }
+  99.667% { animation-timing-function: step-end; --motion-scale-x: 1.62; }
+  100% { --motion-scale-x: 1; }
+}
+@keyframes st-riak-a-sy {
+  0% { animation-timing-function: ease-out; --motion-scale-y: 1; }
+  33% { animation-timing-function: step-end; --motion-scale-y: 1.62; }
+  33.333% { animation-timing-function: ease-out; --motion-scale-y: 1; }
+  66.333% { animation-timing-function: step-end; --motion-scale-y: 1.62; }
+  66.667% { animation-timing-function: ease-out; --motion-scale-y: 1; }
+  99.667% { animation-timing-function: step-end; --motion-scale-y: 1.62; }
+  100% { --motion-scale-y: 1; }
+}
+@keyframes st-riak-a-o {
+  0% { animation-timing-function: ease-out; opacity: 0.8; }
+  33% { animation-timing-function: step-end; opacity: 0; }
+  33.333% { animation-timing-function: ease-out; opacity: 0.8; }
+  66.333% { animation-timing-function: step-end; opacity: 0; }
+  66.667% { animation-timing-function: ease-out; opacity: 0.8; }
+  99.667% { animation-timing-function: step-end; opacity: 0; }
+  100% { opacity: 0.8; }
+}
+
+/* Panggung · orbit luar — Figma 75:768 */
+.st-orbit-o {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-scale-x: 1;
+  --motion-scale-y: 1;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) scale(var(--motion-scale-x), var(--motion-scale-y)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: st-orbit-o-sx, st-orbit-o-sy, st-orbit-o-o;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes st-orbit-o-sx {
+  0% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  25% { animation-timing-function: ease-in-out; --motion-scale-x: 1.025; }
+  50% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  75% { animation-timing-function: ease-in-out; --motion-scale-x: 1.025; }
+  100% { --motion-scale-x: 1; }
+}
+@keyframes st-orbit-o-sy {
+  0% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  25% { animation-timing-function: ease-in-out; --motion-scale-y: 1.025; }
+  50% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  75% { animation-timing-function: ease-in-out; --motion-scale-y: 1.025; }
+  100% { --motion-scale-y: 1; }
+}
+@keyframes st-orbit-o-o {
+  0% { animation-timing-function: ease-in-out; opacity: 1; }
+  25% { animation-timing-function: ease-in-out; opacity: 0.55; }
+  50% { animation-timing-function: ease-in-out; opacity: 1; }
+  75% { animation-timing-function: ease-in-out; opacity: 0.55; }
+  100% { opacity: 1; }
+}
+
+/* Panggung · orbit dalam — Figma 75:769 */
+.st-orbit-i {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-scale-x: 1;
+  --motion-scale-y: 1;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) scale(var(--motion-scale-x), var(--motion-scale-y)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: st-orbit-i-sx, st-orbit-i-sy;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes st-orbit-i-sx {
+  0% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  16.667% { animation-timing-function: ease-in-out; --motion-scale-x: 1.04; }
+  33.333% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  50% { animation-timing-function: ease-in-out; --motion-scale-x: 1.04; }
+  66.667% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  83.333% { animation-timing-function: ease-in-out; --motion-scale-x: 1.04; }
+  100% { --motion-scale-x: 1; }
+}
+@keyframes st-orbit-i-sy {
+  0% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  16.667% { animation-timing-function: ease-in-out; --motion-scale-y: 1.04; }
+  33.333% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  50% { animation-timing-function: ease-in-out; --motion-scale-y: 1.04; }
+  66.667% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  83.333% { animation-timing-function: ease-in-out; --motion-scale-y: 1.04; }
+  100% { --motion-scale-y: 1; }
+}
+
+/* Panggung · orbit putus-putus — Figma 119:2049 */
+.st-orbit-dash {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-rotate: 0;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) rotate(calc(var(--motion-rotate) * 1rad)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: st-orbit-dash-r;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes st-orbit-dash-r {
+  0% { --motion-rotate: 0; }
+  100% { --motion-rotate: -6.283185; }
+}
+
+/* Panggung · orbit titik biru 2 — Figma 119:2052 */
+.st-spin-2 {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-rotate: 0;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) rotate(calc(var(--motion-rotate) * 1rad)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: st-spin-2-r;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes st-spin-2-r {
+  0% { --motion-rotate: 0; }
+  100% { --motion-rotate: -6.283185; }
+}
+
+/* Panggung · orbit dot 2 — Figma 119:2054 */
+.st-dot-2 {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-scale-x: 1.3;
+  --motion-scale-y: 1.3;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) scale(var(--motion-scale-x), var(--motion-scale-y)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: st-dot-2-sx, st-dot-2-sy;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes st-dot-2-sx {
+  0% { animation-timing-function: ease-in-out; --motion-scale-x: 1.3; }
+  8.333% { animation-timing-function: ease-in-out; --motion-scale-x: 0.9; }
+  16.667% { animation-timing-function: ease-in-out; --motion-scale-x: 1.3; }
+  25% { animation-timing-function: ease-in-out; --motion-scale-x: 0.9; }
+  33.333% { animation-timing-function: ease-in-out; --motion-scale-x: 1.3; }
+  41.667% { animation-timing-function: ease-in-out; --motion-scale-x: 0.9; }
+  50% { animation-timing-function: ease-in-out; --motion-scale-x: 1.3; }
+  58.333% { animation-timing-function: ease-in-out; --motion-scale-x: 0.9; }
+  66.667% { animation-timing-function: ease-in-out; --motion-scale-x: 1.3; }
+  75% { animation-timing-function: ease-in-out; --motion-scale-x: 0.9; }
+  83.333% { animation-timing-function: ease-in-out; --motion-scale-x: 1.3; }
+  91.667% { animation-timing-function: ease-in-out; --motion-scale-x: 0.9; }
+  100% { --motion-scale-x: 1.3; }
+}
+@keyframes st-dot-2-sy {
+  0% { animation-timing-function: ease-in-out; --motion-scale-y: 1.3; }
+  8.333% { animation-timing-function: ease-in-out; --motion-scale-y: 0.9; }
+  16.667% { animation-timing-function: ease-in-out; --motion-scale-y: 1.3; }
+  25% { animation-timing-function: ease-in-out; --motion-scale-y: 0.9; }
+  33.333% { animation-timing-function: ease-in-out; --motion-scale-y: 1.3; }
+  41.667% { animation-timing-function: ease-in-out; --motion-scale-y: 0.9; }
+  50% { animation-timing-function: ease-in-out; --motion-scale-y: 1.3; }
+  58.333% { animation-timing-function: ease-in-out; --motion-scale-y: 0.9; }
+  66.667% { animation-timing-function: ease-in-out; --motion-scale-y: 1.3; }
+  75% { animation-timing-function: ease-in-out; --motion-scale-y: 0.9; }
+  83.333% { animation-timing-function: ease-in-out; --motion-scale-y: 1.3; }
+  91.667% { animation-timing-function: ease-in-out; --motion-scale-y: 0.9; }
+  100% { --motion-scale-y: 1.3; }
+}
+
+/* Panggung · kilau kuning 3 — Figma 119:2059 */
+.st-kilau-3 {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-rotate: 0;
+  --motion-scale-x: 0.2;
+  --motion-scale-y: 0.2;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) rotate(calc(var(--motion-rotate) * 1rad)) scale(var(--motion-scale-x), var(--motion-scale-y)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: st-kilau-3-r, st-kilau-3-sx, st-kilau-3-sy, st-kilau-3-o;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes st-kilau-3-r {
+  0% { --motion-rotate: 0; }
+  37.5% { animation-timing-function: ease-out; --motion-rotate: 0; }
+  47.5% { animation-timing-function: step-end; --motion-rotate: -1.570796; }
+  87.5% { animation-timing-function: ease-out; --motion-rotate: 0; }
+  97.5% { --motion-rotate: -1.570796; }
+  100% { --motion-rotate: -1.570796; }
+}
+@keyframes st-kilau-3-sx {
+  0% { --motion-scale-x: 0.2; }
+  37.5% { animation-timing-function: ease-out; --motion-scale-x: 0.2; }
+  42.083% { animation-timing-function: ease-in; --motion-scale-x: 1.15; }
+  47.5% { --motion-scale-x: 0.2; }
+  87.5% { animation-timing-function: ease-out; --motion-scale-x: 0.2; }
+  92.083% { animation-timing-function: ease-in; --motion-scale-x: 1.15; }
+  97.5% { --motion-scale-x: 0.2; }
+  100% { --motion-scale-x: 0.2; }
+}
+@keyframes st-kilau-3-sy {
+  0% { --motion-scale-y: 0.2; }
+  37.5% { animation-timing-function: ease-out; --motion-scale-y: 0.2; }
+  42.083% { animation-timing-function: ease-in; --motion-scale-y: 1.15; }
+  47.5% { --motion-scale-y: 0.2; }
+  87.5% { animation-timing-function: ease-out; --motion-scale-y: 0.2; }
+  92.083% { animation-timing-function: ease-in; --motion-scale-y: 1.15; }
+  97.5% { --motion-scale-y: 0.2; }
+  100% { --motion-scale-y: 0.2; }
+}
+@keyframes st-kilau-3-o {
+  0% { opacity: 0; }
+  37.5% { animation-timing-function: ease-out; opacity: 0; }
+  42.083% { animation-timing-function: ease-in; opacity: 1; }
+  47.5% { opacity: 0; }
+  87.5% { animation-timing-function: ease-out; opacity: 0; }
+  92.083% { animation-timing-function: ease-in; opacity: 1; }
+  97.5% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Panggung · kilau kuning 2 — Figma 119:2057 */
+.st-kilau-2 {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-rotate: 0;
+  --motion-scale-x: 0.2;
+  --motion-scale-y: 0.2;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) rotate(calc(var(--motion-rotate) * 1rad)) scale(var(--motion-scale-x), var(--motion-scale-y)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: st-kilau-2-r, st-kilau-2-sx, st-kilau-2-sy, st-kilau-2-o;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes st-kilau-2-r {
+  0% { --motion-rotate: 0; }
+  20.833% { animation-timing-function: ease-out; --motion-rotate: 0; }
+  30.833% { animation-timing-function: step-end; --motion-rotate: -1.570796; }
+  70.833% { animation-timing-function: ease-out; --motion-rotate: 0; }
+  80.833% { --motion-rotate: -1.570796; }
+  100% { --motion-rotate: -1.570796; }
+}
+@keyframes st-kilau-2-sx {
+  0% { --motion-scale-x: 0.2; }
+  20.833% { animation-timing-function: ease-out; --motion-scale-x: 0.2; }
+  25.417% { animation-timing-function: ease-in; --motion-scale-x: 1.15; }
+  30.833% { --motion-scale-x: 0.2; }
+  70.833% { animation-timing-function: ease-out; --motion-scale-x: 0.2; }
+  75.417% { animation-timing-function: ease-in; --motion-scale-x: 1.15; }
+  80.833% { --motion-scale-x: 0.2; }
+  100% { --motion-scale-x: 0.2; }
+}
+@keyframes st-kilau-2-sy {
+  0% { --motion-scale-y: 0.2; }
+  20.833% { animation-timing-function: ease-out; --motion-scale-y: 0.2; }
+  25.417% { animation-timing-function: ease-in; --motion-scale-y: 1.15; }
+  30.833% { --motion-scale-y: 0.2; }
+  70.833% { animation-timing-function: ease-out; --motion-scale-y: 0.2; }
+  75.417% { animation-timing-function: ease-in; --motion-scale-y: 1.15; }
+  80.833% { --motion-scale-y: 0.2; }
+  100% { --motion-scale-y: 0.2; }
+}
+@keyframes st-kilau-2-o {
+  0% { opacity: 0; }
+  20.833% { animation-timing-function: ease-out; opacity: 0; }
+  25.417% { animation-timing-function: ease-in; opacity: 1; }
+  30.833% { opacity: 0; }
+  70.833% { animation-timing-function: ease-out; opacity: 0; }
+  75.417% { animation-timing-function: ease-in; opacity: 1; }
+  80.833% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Panggung · kilau kuning 1 — Figma 119:2055 */
+.st-kilau-1 {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-rotate: 0;
+  --motion-scale-x: 0.2;
+  --motion-scale-y: 0.2;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) rotate(calc(var(--motion-rotate) * 1rad)) scale(var(--motion-scale-x), var(--motion-scale-y)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: st-kilau-1-r, st-kilau-1-sx, st-kilau-1-sy, st-kilau-1-o;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes st-kilau-1-r {
+  0% { --motion-rotate: 0; }
+  4.167% { animation-timing-function: ease-out; --motion-rotate: 0; }
+  14.167% { animation-timing-function: step-end; --motion-rotate: -1.570796; }
+  54.167% { animation-timing-function: ease-out; --motion-rotate: 0; }
+  64.167% { --motion-rotate: -1.570796; }
+  100% { --motion-rotate: -1.570796; }
+}
+@keyframes st-kilau-1-sx {
+  0% { --motion-scale-x: 0.2; }
+  4.167% { animation-timing-function: ease-out; --motion-scale-x: 0.2; }
+  8.75% { animation-timing-function: ease-in; --motion-scale-x: 1.15; }
+  14.167% { --motion-scale-x: 0.2; }
+  54.167% { animation-timing-function: ease-out; --motion-scale-x: 0.2; }
+  58.75% { animation-timing-function: ease-in; --motion-scale-x: 1.15; }
+  64.167% { --motion-scale-x: 0.2; }
+  100% { --motion-scale-x: 0.2; }
+}
+@keyframes st-kilau-1-sy {
+  0% { --motion-scale-y: 0.2; }
+  4.167% { animation-timing-function: ease-out; --motion-scale-y: 0.2; }
+  8.75% { animation-timing-function: ease-in; --motion-scale-y: 1.15; }
+  14.167% { --motion-scale-y: 0.2; }
+  54.167% { animation-timing-function: ease-out; --motion-scale-y: 0.2; }
+  58.75% { animation-timing-function: ease-in; --motion-scale-y: 1.15; }
+  64.167% { --motion-scale-y: 0.2; }
+  100% { --motion-scale-y: 0.2; }
+}
+@keyframes st-kilau-1-o {
+  0% { opacity: 0; }
+  4.167% { animation-timing-function: ease-out; opacity: 0; }
+  8.75% { animation-timing-function: ease-in; opacity: 1; }
+  14.167% { opacity: 0; }
+  54.167% { animation-timing-function: ease-out; opacity: 0; }
+  58.75% { animation-timing-function: ease-in; opacity: 1; }
+  64.167% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Panggung · orbit titik biru — Figma 119:2050 */
+.st-spin-1 {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-rotate: 0;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) rotate(calc(var(--motion-rotate) * 1rad)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: st-spin-1-r;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes st-spin-1-r {
+  0% { --motion-rotate: 0; }
+  100% { --motion-rotate: 6.283185; }
+}
+
+/* Panggung · orbit dot — Figma 75:771 */
+.st-dot-1 {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-scale-x: 1;
+  --motion-scale-y: 1;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) scale(var(--motion-scale-x), var(--motion-scale-y)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: st-dot-1-sx, st-dot-1-sy;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes st-dot-1-sx {
+  0% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  8.333% { animation-timing-function: ease-in-out; --motion-scale-x: 1.4; }
+  16.667% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  25% { animation-timing-function: ease-in-out; --motion-scale-x: 1.4; }
+  33.333% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  41.667% { animation-timing-function: ease-in-out; --motion-scale-x: 1.4; }
+  50% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  58.333% { animation-timing-function: ease-in-out; --motion-scale-x: 1.4; }
+  66.667% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  75% { animation-timing-function: ease-in-out; --motion-scale-x: 1.4; }
+  83.333% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  91.667% { animation-timing-function: ease-in-out; --motion-scale-x: 1.4; }
+  100% { --motion-scale-x: 1; }
+}
+@keyframes st-dot-1-sy {
+  0% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  8.333% { animation-timing-function: ease-in-out; --motion-scale-y: 1.4; }
+  16.667% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  25% { animation-timing-function: ease-in-out; --motion-scale-y: 1.4; }
+  33.333% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  41.667% { animation-timing-function: ease-in-out; --motion-scale-y: 1.4; }
+  50% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  58.333% { animation-timing-function: ease-in-out; --motion-scale-y: 1.4; }
+  66.667% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  75% { animation-timing-function: ease-in-out; --motion-scale-y: 1.4; }
+  83.333% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  91.667% { animation-timing-function: ease-in-out; --motion-scale-y: 1.4; }
+  100% { --motion-scale-y: 1; }
+}
+
+/* Panggung · platform ring — Figma 75:774 */
+.st-ring {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-scale-x: 1;
+  --motion-scale-y: 1;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) scale(var(--motion-scale-x), var(--motion-scale-y)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: st-ring-sx, st-ring-sy, st-ring-o;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes st-ring-sx {
+  0% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  16.667% { animation-timing-function: ease-in-out; --motion-scale-x: 0.9; }
+  33.333% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  50% { animation-timing-function: ease-in-out; --motion-scale-x: 0.9; }
+  66.667% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  83.333% { animation-timing-function: ease-in-out; --motion-scale-x: 0.9; }
+  100% { --motion-scale-x: 1; }
+}
+@keyframes st-ring-sy {
+  0% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  16.667% { animation-timing-function: ease-in-out; --motion-scale-y: 0.9; }
+  33.333% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  50% { animation-timing-function: ease-in-out; --motion-scale-y: 0.9; }
+  66.667% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  83.333% { animation-timing-function: ease-in-out; --motion-scale-y: 0.9; }
+  100% { --motion-scale-y: 1; }
+}
+@keyframes st-ring-o {
+  0% { animation-timing-function: ease-in-out; opacity: 1; }
+  16.667% { animation-timing-function: ease-in-out; opacity: 0.65; }
+  33.333% { animation-timing-function: ease-in-out; opacity: 1; }
+  50% { animation-timing-function: ease-in-out; opacity: 0.65; }
+  66.667% { animation-timing-function: ease-in-out; opacity: 1; }
+  83.333% { animation-timing-function: ease-in-out; opacity: 0.65; }
+  100% { opacity: 1; }
+}
+
+/* Maskot · badan (melayang) — Figma 75:775 */
+.mk {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-rotate: 0;
+  --motion-translate-y: 0;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) translate(0px, calc(var(--motion-translate-y) * 1px)) rotate(calc(var(--motion-rotate) * 1rad)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: mk-r, mk-ty;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes mk-r {
+  0% { animation-timing-function: ease-in-out; --motion-rotate: 0; }
+  25% { animation-timing-function: ease-in-out; --motion-rotate: -0.013963; }
+  50% { animation-timing-function: ease-in-out; --motion-rotate: 0; }
+  75% { animation-timing-function: ease-in-out; --motion-rotate: 0.013963; }
+  100% { --motion-rotate: 0; }
+}
+@keyframes mk-ty {
+  0% { animation-timing-function: ease-in-out; --motion-translate-y: 0; }
+  16.667% { animation-timing-function: ease-in-out; --motion-translate-y: -6; }
+  33.333% { animation-timing-function: ease-in-out; --motion-translate-y: 0; }
+  50% { animation-timing-function: ease-in-out; --motion-translate-y: -6; }
+  66.667% { animation-timing-function: ease-in-out; --motion-translate-y: 0; }
+  83.333% { animation-timing-function: ease-in-out; --motion-translate-y: -6; }
+  100% { --motion-translate-y: 0; }
+}
+
+/* Maskot · lengan (melambai) — Figma 118:2064 */
+.mk-arm {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-rotate: 0;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) rotate(calc(var(--motion-rotate) * 1rad)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: mk-arm-r;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes mk-arm-r {
+  0% { --motion-rotate: 0; }
+  6.667% { animation-timing-function: ease-out; --motion-rotate: 0; }
+  8.75% { animation-timing-function: ease-in-out; --motion-rotate: 0.191986; }
+  11.25% { animation-timing-function: ease-in-out; --motion-rotate: -0.10472; }
+  13.75% { animation-timing-function: ease-in-out; --motion-rotate: 0.191986; }
+  16.25% { animation-timing-function: ease-in-out; --motion-rotate: -0.10472; }
+  18.75% { animation-timing-function: ease-in-out; --motion-rotate: 0.15708; }
+  22.5% { --motion-rotate: 0; }
+  58.333% { animation-timing-function: ease-out; --motion-rotate: 0; }
+  60.417% { animation-timing-function: ease-in-out; --motion-rotate: 0.15708; }
+  62.917% { animation-timing-function: ease-in-out; --motion-rotate: -0.087266; }
+  65.417% { animation-timing-function: ease-in-out; --motion-rotate: 0.15708; }
+  67.917% { animation-timing-function: ease-in-out; --motion-rotate: -0.069813; }
+  71.667% { --motion-rotate: 0; }
+  100% { --motion-rotate: 0; }
+}
+
+/* Maskot · mata kiri (kedip & lirik) — Figma 118:2069 */
+.mk-eye-l {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-scale-y: 1;
+  --motion-translate-x: 0;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) matrix(0.891007, -0.45399, 0.45399, 0.891007, 0, 0) translate(calc(var(--motion-translate-x) * 1px), 0px) scale(1, var(--motion-scale-y)) matrix(0.891007, 0.45399, -0.45399, 0.891007, 0, 0) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: mk-eye-l-sy, mk-eye-l-tx;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes mk-eye-l-sy {
+  0% { --motion-scale-y: 1; }
+  34.167% { animation-timing-function: ease-in; --motion-scale-y: 1; }
+  34.917% { animation-timing-function: ease-out; --motion-scale-y: 0.08; }
+  35.917% { --motion-scale-y: 1; }
+  83.333% { animation-timing-function: ease-in; --motion-scale-y: 1; }
+  84.083% { animation-timing-function: ease-out; --motion-scale-y: 0.08; }
+  85% { animation-timing-function: ease-in; --motion-scale-y: 1; }
+  85.833% { animation-timing-function: ease-out; --motion-scale-y: 0.08; }
+  86.833% { --motion-scale-y: 1; }
+  100% { --motion-scale-y: 1; }
+}
+@keyframes mk-eye-l-tx {
+  0% { --motion-translate-x: 0; }
+  7.5% { animation-timing-function: ease-out; --motion-translate-x: 0; }
+  9.583% { --motion-translate-x: -1.8; }
+  20.833% { animation-timing-function: ease-in-out; --motion-translate-x: -1.8; }
+  23.333% { --motion-translate-x: 0; }
+  43.333% { animation-timing-function: ease-out; --motion-translate-x: 0; }
+  45.417% { --motion-translate-x: 1.6; }
+  53.333% { animation-timing-function: ease-in-out; --motion-translate-x: 1.6; }
+  55.833% { --motion-translate-x: 0; }
+  100% { --motion-translate-x: 0; }
+}
+
+/* Maskot · mata kanan (kedip & lirik) — Figma 118:2076 */
+.mk-eye-r {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-scale-y: 1;
+  --motion-translate-x: 0;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) matrix(0.970296, -0.241922, 0.241922, 0.970296, 0, 0) translate(calc(var(--motion-translate-x) * 1px), 0px) scale(1, var(--motion-scale-y)) matrix(0.970296, 0.241922, -0.241922, 0.970296, 0, 0) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: mk-eye-r-sy, mk-eye-r-tx;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes mk-eye-r-sy {
+  0% { --motion-scale-y: 1; }
+  34.167% { animation-timing-function: ease-in; --motion-scale-y: 1; }
+  34.917% { animation-timing-function: ease-out; --motion-scale-y: 0.08; }
+  35.917% { --motion-scale-y: 1; }
+  83.333% { animation-timing-function: ease-in; --motion-scale-y: 1; }
+  84.083% { animation-timing-function: ease-out; --motion-scale-y: 0.08; }
+  85% { animation-timing-function: ease-in; --motion-scale-y: 1; }
+  85.833% { animation-timing-function: ease-out; --motion-scale-y: 0.08; }
+  86.833% { --motion-scale-y: 1; }
+  100% { --motion-scale-y: 1; }
+}
+@keyframes mk-eye-r-tx {
+  0% { --motion-translate-x: 0; }
+  7.5% { animation-timing-function: ease-out; --motion-translate-x: 0; }
+  9.583% { --motion-translate-x: -1.8; }
+  20.833% { animation-timing-function: ease-in-out; --motion-translate-x: -1.8; }
+  23.333% { --motion-translate-x: 0; }
+  43.333% { animation-timing-function: ease-out; --motion-translate-x: 0; }
+  45.417% { --motion-translate-x: 1.6; }
+  53.333% { animation-timing-function: ease-in-out; --motion-translate-x: 1.6; }
+  55.833% { --motion-translate-x: 0; }
+  100% { --motion-translate-x: 0; }
+}
+
+/* Top bar · titik notifikasi — Figma 75:676 */
+.fx-bell-dot {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-scale-x: 1;
+  --motion-scale-y: 1;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) scale(var(--motion-scale-x), var(--motion-scale-y)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: fx-bell-dot-sx, fx-bell-dot-sy;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes fx-bell-dot-sx {
+  0% { --motion-scale-x: 1; }
+  2.5% { animation-timing-function: ease-out; --motion-scale-x: 1; }
+  4.167% { animation-timing-function: ease-in-out; --motion-scale-x: 1.6; }
+  7.5% { --motion-scale-x: 1; }
+  52.5% { animation-timing-function: ease-out; --motion-scale-x: 1; }
+  54.167% { animation-timing-function: ease-in-out; --motion-scale-x: 1.6; }
+  57.5% { --motion-scale-x: 1; }
+  100% { --motion-scale-x: 1; }
+}
+@keyframes fx-bell-dot-sy {
+  0% { --motion-scale-y: 1; }
+  2.5% { animation-timing-function: ease-out; --motion-scale-y: 1; }
+  4.167% { animation-timing-function: ease-in-out; --motion-scale-y: 1.6; }
+  7.5% { --motion-scale-y: 1; }
+  52.5% { animation-timing-function: ease-out; --motion-scale-y: 1; }
+  54.167% { animation-timing-function: ease-in-out; --motion-scale-y: 1.6; }
+  57.5% { --motion-scale-y: 1; }
+  100% { --motion-scale-y: 1; }
+}
+
+/* Absensi · halo sekarang — Figma 119:2062 */
+.fx-now-halo {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-scale-x: 1;
+  --motion-scale-y: 1;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) scale(var(--motion-scale-x), var(--motion-scale-y)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: fx-now-halo-sx, fx-now-halo-sy, fx-now-halo-o;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes fx-now-halo-sx {
+  0% { animation-timing-function: ease-out; --motion-scale-x: 1; }
+  15.833% { animation-timing-function: step-end; --motion-scale-x: 2.8; }
+  16.667% { animation-timing-function: ease-out; --motion-scale-x: 1; }
+  32.5% { animation-timing-function: step-end; --motion-scale-x: 2.8; }
+  33.333% { animation-timing-function: ease-out; --motion-scale-x: 1; }
+  49.167% { animation-timing-function: step-end; --motion-scale-x: 2.8; }
+  50% { animation-timing-function: ease-out; --motion-scale-x: 1; }
+  65.833% { animation-timing-function: step-end; --motion-scale-x: 2.8; }
+  66.667% { animation-timing-function: ease-out; --motion-scale-x: 1; }
+  82.5% { animation-timing-function: step-end; --motion-scale-x: 2.8; }
+  83.333% { animation-timing-function: ease-out; --motion-scale-x: 1; }
+  99.167% { animation-timing-function: step-end; --motion-scale-x: 2.8; }
+  100% { --motion-scale-x: 1; }
+}
+@keyframes fx-now-halo-sy {
+  0% { animation-timing-function: ease-out; --motion-scale-y: 1; }
+  15.833% { animation-timing-function: step-end; --motion-scale-y: 2.8; }
+  16.667% { animation-timing-function: ease-out; --motion-scale-y: 1; }
+  32.5% { animation-timing-function: step-end; --motion-scale-y: 2.8; }
+  33.333% { animation-timing-function: ease-out; --motion-scale-y: 1; }
+  49.167% { animation-timing-function: step-end; --motion-scale-y: 2.8; }
+  50% { animation-timing-function: ease-out; --motion-scale-y: 1; }
+  65.833% { animation-timing-function: step-end; --motion-scale-y: 2.8; }
+  66.667% { animation-timing-function: ease-out; --motion-scale-y: 1; }
+  82.5% { animation-timing-function: step-end; --motion-scale-y: 2.8; }
+  83.333% { animation-timing-function: ease-out; --motion-scale-y: 1; }
+  99.167% { animation-timing-function: step-end; --motion-scale-y: 2.8; }
+  100% { --motion-scale-y: 1; }
+}
+@keyframes fx-now-halo-o {
+  0% { animation-timing-function: ease-out; opacity: 0.55; }
+  15.833% { animation-timing-function: step-end; opacity: 0; }
+  16.667% { animation-timing-function: ease-out; opacity: 0.55; }
+  32.5% { animation-timing-function: step-end; opacity: 0; }
+  33.333% { animation-timing-function: ease-out; opacity: 0.55; }
+  49.167% { animation-timing-function: step-end; opacity: 0; }
+  50% { animation-timing-function: ease-out; opacity: 0.55; }
+  65.833% { animation-timing-function: step-end; opacity: 0; }
+  66.667% { animation-timing-function: ease-out; opacity: 0.55; }
+  82.5% { animation-timing-function: step-end; opacity: 0; }
+  83.333% { animation-timing-function: ease-out; opacity: 0.55; }
+  99.167% { animation-timing-function: step-end; opacity: 0; }
+  100% { opacity: 0.55; }
+}
+
+/* Absensi · titik sekarang — Figma 75:704 */
+.fx-now-dot {
+  ;
+  animation-name: fx-now-dot-o;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes fx-now-dot-o {
+  0% { animation-timing-function: ease-in-out; opacity: 1; }
+  3.333% { animation-timing-function: ease-in-out; opacity: 0.3; }
+  6.667% { animation-timing-function: ease-in-out; opacity: 1; }
+  10% { animation-timing-function: ease-in-out; opacity: 0.3; }
+  13.333% { animation-timing-function: ease-in-out; opacity: 1; }
+  16.667% { animation-timing-function: ease-in-out; opacity: 0.3; }
+  20% { animation-timing-function: ease-in-out; opacity: 1; }
+  23.333% { animation-timing-function: ease-in-out; opacity: 0.3; }
+  26.667% { animation-timing-function: ease-in-out; opacity: 1; }
+  30% { animation-timing-function: ease-in-out; opacity: 0.3; }
+  33.333% { animation-timing-function: ease-in-out; opacity: 1; }
+  36.667% { animation-timing-function: ease-in-out; opacity: 0.3; }
+  40% { animation-timing-function: ease-in-out; opacity: 1; }
+  43.333% { animation-timing-function: ease-in-out; opacity: 0.3; }
+  46.667% { animation-timing-function: ease-in-out; opacity: 1; }
+  50% { animation-timing-function: ease-in-out; opacity: 0.3; }
+  53.333% { animation-timing-function: ease-in-out; opacity: 1; }
+  56.667% { animation-timing-function: ease-in-out; opacity: 0.3; }
+  60% { animation-timing-function: ease-in-out; opacity: 1; }
+  63.333% { animation-timing-function: ease-in-out; opacity: 0.3; }
+  66.667% { animation-timing-function: ease-in-out; opacity: 1; }
+  70% { animation-timing-function: ease-in-out; opacity: 0.3; }
+  73.333% { animation-timing-function: ease-in-out; opacity: 1; }
+  76.667% { animation-timing-function: ease-in-out; opacity: 0.3; }
+  80% { animation-timing-function: ease-in-out; opacity: 1; }
+  83.333% { animation-timing-function: ease-in-out; opacity: 0.3; }
+  86.667% { animation-timing-function: ease-in-out; opacity: 1; }
+  90% { animation-timing-function: ease-in-out; opacity: 0.3; }
+  93.333% { animation-timing-function: ease-in-out; opacity: 1; }
+  96.667% { animation-timing-function: ease-in-out; opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+/* Absensi · titik "Belum absen" — Figma 75:722 */
+.fx-status-dot {
+  ;
+  animation-name: fx-status-dot-o;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes fx-status-dot-o {
+  0% { animation-timing-function: ease-in-out; opacity: 1; }
+  4.167% { animation-timing-function: ease-in-out; opacity: 0.25; }
+  8.333% { animation-timing-function: ease-in-out; opacity: 1; }
+  12.5% { animation-timing-function: ease-in-out; opacity: 0.25; }
+  16.667% { animation-timing-function: ease-in-out; opacity: 1; }
+  20.833% { animation-timing-function: ease-in-out; opacity: 0.25; }
+  25% { animation-timing-function: ease-in-out; opacity: 1; }
+  29.167% { animation-timing-function: ease-in-out; opacity: 0.25; }
+  33.333% { animation-timing-function: ease-in-out; opacity: 1; }
+  37.5% { animation-timing-function: ease-in-out; opacity: 0.25; }
+  41.667% { animation-timing-function: ease-in-out; opacity: 1; }
+  45.833% { animation-timing-function: ease-in-out; opacity: 0.25; }
+  50% { animation-timing-function: ease-in-out; opacity: 1; }
+  54.167% { animation-timing-function: ease-in-out; opacity: 0.25; }
+  58.333% { animation-timing-function: ease-in-out; opacity: 1; }
+  62.5% { animation-timing-function: ease-in-out; opacity: 0.25; }
+  66.667% { animation-timing-function: ease-in-out; opacity: 1; }
+  70.833% { animation-timing-function: ease-in-out; opacity: 0.25; }
+  75% { animation-timing-function: ease-in-out; opacity: 1; }
+  79.167% { animation-timing-function: ease-in-out; opacity: 0.25; }
+  83.333% { animation-timing-function: ease-in-out; opacity: 1; }
+  87.5% { animation-timing-function: ease-in-out; opacity: 0.25; }
+  91.667% { animation-timing-function: ease-in-out; opacity: 1; }
+  95.833% { animation-timing-function: ease-in-out; opacity: 0.25; }
+  100% { opacity: 1; }
+}
+
+/* Sapaan · cahaya matahari — Figma 119:2061 */
+.fx-sun-glow {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-scale-x: 0.7;
+  --motion-scale-y: 0.7;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) scale(var(--motion-scale-x), var(--motion-scale-y)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: fx-sun-glow-sx, fx-sun-glow-sy, fx-sun-glow-o;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes fx-sun-glow-sx {
+  0% { animation-timing-function: ease-in-out; --motion-scale-x: 0.7; }
+  8.333% { animation-timing-function: ease-in-out; --motion-scale-x: 1.5; }
+  16.667% { animation-timing-function: ease-in-out; --motion-scale-x: 0.7; }
+  25% { animation-timing-function: ease-in-out; --motion-scale-x: 1.5; }
+  33.333% { animation-timing-function: ease-in-out; --motion-scale-x: 0.7; }
+  41.667% { animation-timing-function: ease-in-out; --motion-scale-x: 1.5; }
+  50% { animation-timing-function: ease-in-out; --motion-scale-x: 0.7; }
+  58.333% { animation-timing-function: ease-in-out; --motion-scale-x: 1.5; }
+  66.667% { animation-timing-function: ease-in-out; --motion-scale-x: 0.7; }
+  75% { animation-timing-function: ease-in-out; --motion-scale-x: 1.5; }
+  83.333% { animation-timing-function: ease-in-out; --motion-scale-x: 0.7; }
+  91.667% { animation-timing-function: ease-in-out; --motion-scale-x: 1.5; }
+  100% { --motion-scale-x: 0.7; }
+}
+@keyframes fx-sun-glow-sy {
+  0% { animation-timing-function: ease-in-out; --motion-scale-y: 0.7; }
+  8.333% { animation-timing-function: ease-in-out; --motion-scale-y: 1.5; }
+  16.667% { animation-timing-function: ease-in-out; --motion-scale-y: 0.7; }
+  25% { animation-timing-function: ease-in-out; --motion-scale-y: 1.5; }
+  33.333% { animation-timing-function: ease-in-out; --motion-scale-y: 0.7; }
+  41.667% { animation-timing-function: ease-in-out; --motion-scale-y: 1.5; }
+  50% { animation-timing-function: ease-in-out; --motion-scale-y: 0.7; }
+  58.333% { animation-timing-function: ease-in-out; --motion-scale-y: 1.5; }
+  66.667% { animation-timing-function: ease-in-out; --motion-scale-y: 0.7; }
+  75% { animation-timing-function: ease-in-out; --motion-scale-y: 1.5; }
+  83.333% { animation-timing-function: ease-in-out; --motion-scale-y: 0.7; }
+  91.667% { animation-timing-function: ease-in-out; --motion-scale-y: 1.5; }
+  100% { --motion-scale-y: 0.7; }
+}
+@keyframes fx-sun-glow-o {
+  0% { animation-timing-function: ease-in-out; opacity: 0.35; }
+  8.333% { animation-timing-function: ease-in-out; opacity: 0.9; }
+  16.667% { animation-timing-function: ease-in-out; opacity: 0.35; }
+  25% { animation-timing-function: ease-in-out; opacity: 0.9; }
+  33.333% { animation-timing-function: ease-in-out; opacity: 0.35; }
+  41.667% { animation-timing-function: ease-in-out; opacity: 0.9; }
+  50% { animation-timing-function: ease-in-out; opacity: 0.35; }
+  58.333% { animation-timing-function: ease-in-out; opacity: 0.9; }
+  66.667% { animation-timing-function: ease-in-out; opacity: 0.35; }
+  75% { animation-timing-function: ease-in-out; opacity: 0.9; }
+  83.333% { animation-timing-function: ease-in-out; opacity: 0.35; }
+  91.667% { animation-timing-function: ease-in-out; opacity: 0.9; }
+  100% { opacity: 0.35; }
+}
+
+/* Sapaan · inti matahari — Figma 75:963 */
+.fx-sun-core {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-scale-x: 1;
+  --motion-scale-y: 1;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) scale(var(--motion-scale-x), var(--motion-scale-y)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: fx-sun-core-sx, fx-sun-core-sy;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes fx-sun-core-sx {
+  0% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  8.333% { animation-timing-function: ease-in-out; --motion-scale-x: 1.35; }
+  16.667% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  25% { animation-timing-function: ease-in-out; --motion-scale-x: 1.35; }
+  33.333% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  41.667% { animation-timing-function: ease-in-out; --motion-scale-x: 1.35; }
+  50% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  58.333% { animation-timing-function: ease-in-out; --motion-scale-x: 1.35; }
+  66.667% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  75% { animation-timing-function: ease-in-out; --motion-scale-x: 1.35; }
+  83.333% { animation-timing-function: ease-in-out; --motion-scale-x: 1; }
+  91.667% { animation-timing-function: ease-in-out; --motion-scale-x: 1.35; }
+  100% { --motion-scale-x: 1; }
+}
+@keyframes fx-sun-core-sy {
+  0% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  8.333% { animation-timing-function: ease-in-out; --motion-scale-y: 1.35; }
+  16.667% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  25% { animation-timing-function: ease-in-out; --motion-scale-y: 1.35; }
+  33.333% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  41.667% { animation-timing-function: ease-in-out; --motion-scale-y: 1.35; }
+  50% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  58.333% { animation-timing-function: ease-in-out; --motion-scale-y: 1.35; }
+  66.667% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  75% { animation-timing-function: ease-in-out; --motion-scale-y: 1.35; }
+  83.333% { animation-timing-function: ease-in-out; --motion-scale-y: 1; }
+  91.667% { animation-timing-function: ease-in-out; --motion-scale-y: 1.35; }
+  100% { --motion-scale-y: 1; }
+}
+
+/* Sapaan · sinar matahari — Figma 75:964 */
+.fx-sun-rays {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-rotate: 0;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) rotate(calc(var(--motion-rotate) * 1rad)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: fx-sun-rays-r;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes fx-sun-rays-r {
+  0% { --motion-rotate: 0; }
+  100% { --motion-rotate: 6.283185; }
+}
+
+/* Chip notifikasi (melayang) — Figma 75:778 */
+.fx-chip-a {
+  --motion-translate-y: 0;
+  transform: translate(0px, calc(var(--motion-translate-y) * 1px));
+  transform-origin: 0 0;
+  animation-name: fx-chip-a-ty;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes fx-chip-a-ty {
+  0% { animation-timing-function: ease-in-out; --motion-translate-y: 0; }
+  16.667% { animation-timing-function: ease-in-out; --motion-translate-y: -7; }
+  33.333% { animation-timing-function: ease-in-out; --motion-translate-y: 0; }
+  50% { animation-timing-function: ease-in-out; --motion-translate-y: -7; }
+  66.667% { animation-timing-function: ease-in-out; --motion-translate-y: 0; }
+  83.333% { animation-timing-function: ease-in-out; --motion-translate-y: -7; }
+  100% { --motion-translate-y: 0; }
+}
+
+/* Chip notifikasi · lonceng — Figma 75:780 */
+.fx-chip-a-ic {
+  --motion-origin-x: 50;
+  --motion-origin-y: 50;
+  --motion-rotate: 0;
+  transform: translate(calc(var(--motion-origin-x) * 1%), calc(var(--motion-origin-y) * 1%)) rotate(calc(var(--motion-rotate) * 1rad)) translate(calc(var(--motion-origin-x) * -1%), calc(var(--motion-origin-y) * -1%));
+  transform-origin: 0 0;
+  animation-name: fx-chip-a-ic-r;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes fx-chip-a-ic-r {
+  0% { --motion-rotate: 0; }
+  3.333% { animation-timing-function: ease-out; --motion-rotate: 0; }
+  4.167% { animation-timing-function: ease-in-out; --motion-rotate: -0.279253; }
+  5.167% { animation-timing-function: ease-in-out; --motion-rotate: 0.244346; }
+  6.167% { animation-timing-function: ease-in-out; --motion-rotate: -0.191986; }
+  7.167% { animation-timing-function: ease-in-out; --motion-rotate: 0.139626; }
+  8.167% { animation-timing-function: ease-in-out; --motion-rotate: -0.069813; }
+  9.167% { --motion-rotate: 0; }
+  53.333% { animation-timing-function: ease-out; --motion-rotate: 0; }
+  54.167% { animation-timing-function: ease-in-out; --motion-rotate: -0.279253; }
+  55.167% { animation-timing-function: ease-in-out; --motion-rotate: 0.244346; }
+  56.167% { animation-timing-function: ease-in-out; --motion-rotate: -0.191986; }
+  57.167% { animation-timing-function: ease-in-out; --motion-rotate: 0.139626; }
+  58.167% { animation-timing-function: ease-in-out; --motion-rotate: -0.069813; }
+  59.167% { --motion-rotate: 0; }
+  100% { --motion-rotate: 0; }
+}
+
+/* Chip task terbaru (melayang) — Figma 75:788 */
+.fx-chip-b {
+  --motion-translate-y: 0;
+  transform: translate(0px, calc(var(--motion-translate-y) * 1px));
+  transform-origin: 0 0;
+  animation-name: fx-chip-b-ty;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes fx-chip-b-ty {
+  0% { animation-timing-function: ease-in-out; --motion-translate-y: 0; }
+  16.667% { animation-timing-function: ease-in-out; --motion-translate-y: 5; }
+  33.333% { animation-timing-function: ease-in-out; --motion-translate-y: 0; }
+  50% { animation-timing-function: ease-in-out; --motion-translate-y: 5; }
+  66.667% { animation-timing-function: ease-in-out; --motion-translate-y: 0; }
+  83.333% { animation-timing-function: ease-in-out; --motion-translate-y: 5; }
+  100% { --motion-translate-y: 0; }
+}
+
+/* Chip task terbaru · panah — Figma 75:790 */
+.fx-chip-b-ic {
+  --motion-translate-x: 0;
+  --motion-translate-y: 0;
+  transform: translate(calc(var(--motion-translate-x) * 1px), calc(var(--motion-translate-y) * 1px));
+  transform-origin: 0 0;
+  animation-name: fx-chip-b-ic-tx, fx-chip-b-ic-ty;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: var(--tl, 0s);
+}
+@keyframes fx-chip-b-ic-tx {
+  0% { --motion-translate-x: 0; }
+  25% { animation-timing-function: ease-out; --motion-translate-x: 0; }
+  26.833% { animation-timing-function: ease-in-out; --motion-translate-x: 2.5; }
+  29.583% { --motion-translate-x: 0; }
+  75% { animation-timing-function: ease-out; --motion-translate-x: 0; }
+  76.833% { animation-timing-function: ease-in-out; --motion-translate-x: 2.5; }
+  79.583% { --motion-translate-x: 0; }
+  100% { --motion-translate-x: 0; }
+}
+@keyframes fx-chip-b-ic-ty {
+  0% { --motion-translate-y: 0; }
+  25% { animation-timing-function: ease-out; --motion-translate-y: 0; }
+  26.833% { animation-timing-function: ease-in-out; --motion-translate-y: -2.5; }
+  29.583% { --motion-translate-y: 0; }
+  75% { animation-timing-function: ease-out; --motion-translate-y: 0; }
+  76.833% { animation-timing-function: ease-in-out; --motion-translate-y: -2.5; }
+  79.583% { --motion-translate-y: 0; }
+  100% { --motion-translate-y: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-l1, .bg-l2, .bg-l3, .bg-l4, .bg-l5, .st-glow, .st-riak-b, .st-riak-a, .st-orbit-o, .st-orbit-i, .st-orbit-dash, .st-spin-2, .st-dot-2, .st-kilau-3, .st-kilau-2, .st-kilau-1, .st-spin-1, .st-dot-1, .st-ring, .mk, .mk-arm, .mk-eye-l, .mk-eye-r, .fx-bell-dot, .fx-now-halo, .fx-now-dot, .fx-status-dot, .fx-sun-glow, .fx-sun-core, .fx-sun-rays, .fx-chip-a, .fx-chip-a-ic, .fx-chip-b, .fx-chip-b-ic { animation: none !important; }
+}

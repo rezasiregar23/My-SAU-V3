@@ -27,13 +27,13 @@ function attendance() {
         <p class="clock-big"><span data-live="clock">${fmtTime(n).replace('.', ':')}</span><small>WIB</small></p></div>
       ${btn}
     </div>
-    <div class="track" style="--p:${pct}%"><i class="track-fill"></i><i class="track-now"></i><i class="track-end"></i></div>
+    <div class="track" style="--p:${pct}%"><i class="track-fill"></i><i class="track-halo fx-now-halo"></i><i class="track-now fx-now-dot"></i><i class="track-end"></i></div>
     <div class="att-times">
       <div><small>Masuk</small><b>${a.in || '--.--'}</b></div>
       <span class="hint hint-${hintTone}">${esc(hint)}</span>
       <div class="r"><small>Pulang</small><b>${a.out || '--.--'}</b></div>
     </div>
-    <div class="att-foot">${icon('pin', 14, 2)}<span>${esc(USER.office)} · dalam radius</span><i class="ok-dot"></i><span class="flex"></span><span class="pill pill-${status[1]}"><i class="d"></i>${status[0]}</span></div>
+    <div class="att-foot">${icon('pin', 14, 2)}<span>${esc(USER.office)} · dalam radius</span><i class="ok-dot"></i><span class="flex"></span><span class="pill pill-${status[1]}"><i class="d${a.in ? '' : ' fx-status-dot'}"></i>${status[0]}</span></div>
   </article>`;
 }
 
@@ -66,23 +66,37 @@ function stage() {
   const c = counts();
   const waiting = activeTasks().filter((t) => t.due <= ymd(today())).length;
   const newest = allTasks()[0];
+  const S = 'assets/stage/';
+  const st = (cls, file) => `<span class="st ${cls}"><img src="${S}${file}" alt=""></span>`;
+  // Susunan & urutan lapisan mengikuti frame Figma "Panggung Maskot" (75:766); animasi di css/motion.css
   return `<section class="col col-center stage-col" aria-label="Sapaan">
     <div class="greet">
-      <span class="date-pill">${icon('sun', 15, 2)}<span>${fmtLong(today())}</span></span>
+      <span class="date-pill"><span class="sun-ic" aria-hidden="true"><span class="fx-sun-glow"><img src="${S}sun-glow.svg" alt=""></span><span class="fx-sun-core"><img src="${S}sun-core.svg" alt=""></span><span class="fx-sun-rays"><img src="${S}sun-rays.svg" alt=""></span></span><span>${fmtLong(today())}</span></span>
       <h1>${greeting(n.getHours())}, <span class="accent">${esc(USER.name)}</span></h1>
     </div>
     <div class="stage">
-      <div class="orbit o1"></div><div class="orbit o2"></div><div class="glow"></div>
-      <i class="spark s1">✦</i><i class="spark s2">✦</i><i class="spark s3">✦</i>
-      <i class="odot d1"></i><i class="odot d2"></i>
-      <div class="platform"></div>
-      <img class="mascot" src="assets/mascot.webp" alt="Maskot MySAU melambaikan tangan" width="520" height="577" onerror="this.onerror=null;this.src='assets/mascot.png'">
-      <button type="button" class="float-chip fc-left glass" data-action="notif">
-        <span class="fc-ic">${icon('bell', 19)}</span><span class="fc-txt"><small>Notifikasi</small><b>03<em>Notifikasi baru</em></b></span>
-      </button>
-      <a class="float-chip fc-right glass" href="#/task">
-        <span class="fc-ic">${icon('arrowUR', 19)}</span><span class="fc-txt"><small>Task terbaru · ${esc(newest.app)}</small><b>${pad(waiting)}<em>Task menunggu Anda</em></b></span>
-      </a>
+      <div class="stage-box">
+        <div aria-hidden="true">
+          ${st('st-glow', 'glow.svg')}${st('st-riak-b', 'riak-b.svg')}${st('st-riak-a', 'riak-a.svg')}
+          ${st('st-orbit-o', 'orbit-outer.svg')}${st('st-orbit-i', 'orbit-inner.svg')}${st('st-orbit-dash', 'orbit-dashed.png')}
+          <span class="st st-spin-2">${st('st-dot-2', 'orbit-dot-2.svg')}</span>
+          ${st('st-kilau-3', 'kilau-3.svg')}${st('st-kilau-2', 'kilau-2.svg')}${st('st-kilau-1', 'kilau-1.svg')}
+          <span class="st st-spin-1">${st('st-dot-1', 'orbit-dot.svg')}</span>
+          ${st('st-platform', 'platform.svg')}${st('st-ring', 'platform-ring.svg')}
+        </div>
+        <div class="mk" role="img" aria-label="Maskot MySAU melambaikan tangan">
+          <i class="mk-layer mk-body"></i><i class="mk-layer mk-skin-l"></i><i class="mk-layer mk-skin-r"></i>
+          <span class="mk-arm"><i class="mk-layer"></i></span>
+          <span class="mk-eye l"><span><i class="mk-eye-l"><img src="${S}mata-kiri.svg" alt=""></i></span></span>
+          <span class="mk-eye r"><span><i class="mk-eye-r"><img src="${S}mata-kanan.svg" alt=""></i></span></span>
+        </div>
+        <button type="button" class="float-chip fc-left glass fx-chip-a" data-action="notif">
+          <span class="fc-ic"><span class="fx-chip-a-ic">${icon('bell', 19)}</span></span><span class="fc-txt"><small>Notifikasi</small><b>03<em>Notifikasi baru</em></b></span>
+        </button>
+        <a class="float-chip fc-right glass fx-chip-b" href="#/task">
+          <span class="fc-ic"><span class="fx-chip-b-ic">${icon('arrowUR', 19)}</span></span><span class="fc-txt"><small>Task terbaru · ${esc(newest.app)}</small><b>${pad(waiting)}<em>Task menunggu Anda</em></b></span>
+        </a>
+      </div>
     </div>
   </section>`;
 }

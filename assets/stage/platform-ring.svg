@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="190" height="30" viewBox="0 0 190 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="stroke0_0_327" fill="white">
+<path d="M190 15C190 23.2843 147.467 30 95 30C42.5329 30 0 23.2843 0 15C0 6.71573 42.5329 0 95 0C147.467 0 190 6.71573 190 15Z"/>
+</mask>
+<path id="platform ring" d="M190 15C190 23.2843 147.467 30 95 30C42.5329 30 0 23.2843 0 15C0 6.71573 42.5329 0 95 0C147.467 0 190 6.71573 190 15Z" stroke-width="2.4" stroke="url(#paint0_linear_0_327)" mask="url(#stroke0_0_327)"/>
+<defs>
+<linearGradient id="paint0_linear_0_327" x1="0" y1="15" x2="190" y2="15" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8AB6F0" stop-opacity="0.5"/>
+<stop offset="1" stop-color="#6FD0E6" stop-opacity="0.5"/>
+</linearGradient>
+</defs>
+</svg>
