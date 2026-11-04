@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>MySAU — Ruang kerja harian SAU</title>
+  <meta name="description" content="MySAU: absensi, task, kalender, dan pintasan aplikasi SAU dalam satu halaman." />
+  <meta name="theme-color" content="#EAF2F8" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"></div>
+
+  <aside class="sidebar glass" aria-label="Navigasi utama">
+    <a class="logo" href="#/beranda" aria-label="MySAU beranda">SAU</a>
+    <nav class="side-nav" id="sideNav"></nav>
+    <button class="side-btn side-help" type="button" aria-label="Bantuan" data-action="help"></button>
+  </aside>
+
+  <header class="topbar">
+    <a class="brand" href="#/beranda">My<span>SAU</span></a>
+    <div class="search" id="search">
+      <span class="search-ic" data-icon="search"></span>
+      <input id="searchInput" type="search" placeholder="Cari aplikasi, task, pengumuman, atau rekan kerja…" autocomplete="off" aria-label="Cari" />
+      <kbd>⌘K</kbd>
+      <div class="popover search-results" id="searchResults" hidden></div>
+    </div>
+    <div class="top-actions">
+      <button class="icon-btn glass" type="button" id="bellBtn" aria-label="Notifikasi" aria-haspopup="true">
+        <span data-icon="bell"></span><i class="dot"></i>
+      </button>
+      <div class="popover notif-pop" id="notifPop" hidden></div>
+      <button class="profile glass" type="button" id="profileBtn" aria-haspopup="true">
+        <span class="avatar">SY</span>
+        <span class="profile-txt"><b id="profileName">Siyono</b><small id="profileRole">Dept. Head · Divisi Teknologi Informasi</small></span>
+        <span data-icon="chevDown"></span>
+      </button>
+      <div class="popover profile-pop" id="profilePop" hidden></div>
+    </div>
+  </header>
+
+  <main id="app" class="page-outlet" tabindex="-1"></main>
+
+  <nav class="tabbar glass" id="tabbar" aria-label="Halaman"></nav>
+
+  <div class="toast-wrap" id="toasts" aria-live="polite"></div>
+  <div class="modal-root" id="modalRoot"></div>
+
+  <noscript><p class="noscript">MySAU membutuhkan JavaScript untuk berjalan.</p></noscript>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
