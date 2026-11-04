@@ -116,11 +116,12 @@ export function openAgendaModal({ mode = 'event', date = today(), start, onSaved
   const st = { mode, date: ymd(date), start: nextSlot, end: fromMin(toMin(nextSlot) + 60), guests: [], type: 'rapat', app: 'Pervorms', priority: 'sedang', allDay: false };
   const lastFocus = document.activeElement;
 
-  const timeSelect = (name, val) => `<select name="${name}" class="fld-time">${TIME_OPTS.map((x) => `<option ${x === val ? 'selected' : ''}>${x}</option>`).join('')}</select>`;
+  const timeSelect = (name, val) => `<select name="${name}" class="fld-time" aria-label="${name === 'end' ? 'Jam selesai' : 'Jam'}">${TIME_OPTS.map((x) => `<option ${x === val ? 'selected' : ''}>${x}</option>`).join('')}</select>`;
+  const dateField = (label) => `<label class="fld-date"><span>${fmtLong(parseYmd(st.date))}</span><input type="date" name="date" value="${st.date}" aria-label="${label}"></label>`;
 
   const body = () => st.mode === 'event' ? `
       <div class="row">${icon('clock', 18)}<div class="row-main">
-        <div class="inline"><input type="date" name="date" value="${st.date}" class="fld-date" aria-label="Tanggal">${st.allDay ? '' : `${timeSelect('start', st.start)}<span class="dash">–</span>${timeSelect('end', st.end)}`}</div>
+        <div class="inline">${dateField('Tanggal')}${st.allDay ? '' : `${timeSelect('start', st.start)}<span class="dash">–</span>${timeSelect('end', st.end)}`}</div>
         <div class="inline sub"><span>Tidak berulang · WIB (GMT+7)</span><label class="switch"><input type="checkbox" name="allDay" ${st.allDay ? 'checked' : ''}><i></i>Sepanjang hari</label></div>
       </div></div>
       <div class="row">${icon('users', 18)}<div class="row-main chips-in">${st.guests.map((g, i) => `<span class="chip">${avatar(g.code, 20)}${esc(g.name)}<button type="button" data-rm-guest="${i}" aria-label="Hapus ${esc(g.name)}">${icon('x', 12, 2.4)}</button></span>`).join('')}<input name="guest" placeholder="Tambah tamu (nama lalu Enter)" list="peopleList"></div></div>
@@ -133,7 +134,7 @@ export function openAgendaModal({ mode = 'event', date = today(), start, onSaved
       <p class="note">${esc(USER.name)} · Sibuk · Visibilitas default · Undangan dikirim lewat email & notifikasi MySAU</p>`
     : `
       <div class="row">${icon('clock', 18)}<div class="row-main">
-        <div class="inline"><span class="lbl">Tenggat</span><input type="date" name="date" value="${st.date}" class="fld-date" aria-label="Tanggal tenggat">${timeSelect('start', st.start)}</div>
+        <div class="inline"><span class="lbl">Tenggat</span>${dateField('Tanggal tenggat')}${timeSelect('start', st.start)}</div>
         <div class="inline sub"><span>Tidak berulang · WIB (GMT+7)</span></div>
       </div></div>
       <div class="row">${icon('grid', 18)}<div class="row-main"><small class="cap">Aplikasi terkait</small><div class="chips">${['Pervorms', 'HRIS', 'Talent', 'Assessment', 'InOffice'].map((a) => `<button type="button" class="opt ${st.app === a ? 'on' : ''}" data-app="${a}" style="--c:#2F6FD0"><i></i>${a}${st.app === a ? icon('check', 13, 2.4) : ''}</button>`).join('')}</div></div></div>
@@ -147,9 +148,9 @@ export function openAgendaModal({ mode = 'event', date = today(), start, onSaved
     const title = root.querySelector('[name=title]')?.value || '';
     root.innerHTML = `<div class="scrim" data-close></div>
       <form class="modal glass-strong" role="dialog" aria-modal="true" aria-labelledby="mTitle" novalidate>
-        <div class="md-head"><small id="mTitle">${st.mode === 'event' ? 'Agenda baru' : 'Task baru'}</small>
+        <div class="md-head"><div class="md-title"><small id="mTitle">${st.mode === 'event' ? 'Agenda baru' : 'Task baru'}</small>
+          <input name="title" class="m-title" placeholder="${st.mode === 'event' ? 'Judul agenda, mis. Rapat sinkronisasi vendor' : 'Judul task, mis. Kirim laporan KPI Q4'}" value="${esc(title)}" required autocomplete="off" aria-labelledby="mTitle"></div>
           <button type="button" class="icon-btn sm" data-close aria-label="Tutup">${icon('x', 16, 2)}</button></div>
-        <input name="title" class="m-title" placeholder="${st.mode === 'event' ? 'Judul agenda, mis. Rapat sinkronisasi vendor' : 'Judul task, mis. Kirim laporan KPI Q4'}" value="${esc(title)}" required autocomplete="off">
         <div class="seg sm" role="tablist"><button type="button" role="tab" aria-selected="${st.mode === 'event'}" data-mode="event" class="${st.mode === 'event' ? 'on' : ''}">${icon('calendar', 14)}Event</button><button type="button" role="tab" aria-selected="${st.mode === 'task'}" data-mode="task" class="${st.mode === 'task' ? 'on' : ''}">${icon('task', 14)}Task</button></div>
         <div class="m-body">${body()}</div>
         <p class="m-error" hidden>Isi judul dulu sebelum menyimpan.</p>
@@ -183,6 +184,7 @@ export function openAgendaModal({ mode = 'event', date = today(), start, onSaved
   document.addEventListener('keydown', onKey);
 
   root.onclick = (e) => {
+    if (e.target.matches?.('.fld-date input')) { try { e.target.showPicker(); } catch { /* browser lama: input tetap bisa diketik */ } return; }
     const el = e.target.closest('button, .scrim');
     if (!el) return;
     if (el.hasAttribute('data-close')) return close();
@@ -195,6 +197,7 @@ export function openAgendaModal({ mode = 'event', date = today(), start, onSaved
     if (el.dataset.action === 'todo') toast(el.dataset.msg);
   };
   root.onchange = (e) => {
+    if (e.target.name === 'date' && e.target.value) { st.date = e.target.value; e.target.previousElementSibling.textContent = fmtLong(parseYmd(st.date)); }
     if (e.target.name === 'allDay') { readFields(); st.allDay = e.target.checked; render(); }
     if (e.target.name === 'start' && st.mode === 'event') { st.start = e.target.value; if (toMin(st.end) <= toMin(st.start)) { st.end = fromMin(Math.min(toMin(st.start) + 60, 22 * 60)); render(); } }
   };
