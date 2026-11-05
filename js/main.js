@@ -66,9 +66,22 @@ document.addEventListener('click', (e) => {
   closePop();
   toast(t.dataset.msg || 'Pusat bantuan: hubungi IT Service Desk');
 });
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePop(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { closePop(); setSearchOpen(false); } });
 
-window.addEventListener('hashchange', () => { closePop(); render({ focus: true }); });
+/* HP: tombol ikon search membuka kolom cari di tengah, di bawah header */
+const searchToggle = $('#searchToggle');
+function setSearchOpen(open) {
+  const was = document.documentElement.classList.contains('search-open');
+  if (was === open) return;
+  document.documentElement.classList.toggle('search-open', open);
+  searchToggle.setAttribute('aria-expanded', String(open));
+  if (open) $('#searchInput').focus();
+  else { $('#searchResults').hidden = true; if (document.activeElement === $('#searchInput')) searchToggle.focus(); }
+}
+searchToggle.addEventListener('click', (e) => { e.stopPropagation(); setSearchOpen(!document.documentElement.classList.contains('search-open')); });
+document.addEventListener('click', (e) => { if (!e.target.closest('#search, #searchToggle') && !$('#searchInput').value) setSearchOpen(false); });
+
+window.addEventListener('hashchange', () => { closePop(); setSearchOpen(false); render({ focus: true }); });
 subscribe(() => render());
 render();
 

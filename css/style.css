@@ -182,7 +182,7 @@ kbd { font-family: inherit; font-size: 11px; font-weight: 600; color: var(--mute
 .tab { display: flex; align-items: center; gap: 9px; padding: 13px 22px 13px 20px; border-radius: 999px; color: #5E6F88; font-weight: 500; font-size: 14px; transition: background .2s, color .2s; }
 .tab:hover { color: var(--blue); }
 .tab.on { background: rgba(255, 255, 255, .95); color: var(--blue); font-weight: 600; box-shadow: 0 4px 12px rgba(100, 135, 165, .14); }
-.tab-extra { display: none; }
+.tab-extra, .search-toggle { display: none; }
 .tb-badge { font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 999px; background: #DCE8F6; color: var(--blue); }
 
 /* ----------------------------------------------------------------- page grid */
@@ -719,9 +719,14 @@ select.fld-plain { cursor: pointer; width: auto; font-weight: 500; align-self: f
     -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
     -webkit-mask-image: linear-gradient(180deg, #000 85%, transparent); mask-image: linear-gradient(180deg, #000 85%, transparent);
   }
-  .search { grid-column: 1 / -1; grid-row: 2; }
+  /* search jadi ikon; setelah diklik, kolom cari muncul di tengah di bawah header */
+  .search-toggle { display: grid; }
+  .search-toggle .st-close, html.search-open .search-toggle .st-open { display: none; }
+  html.search-open .search-toggle .st-close { display: block; }
+  .search { display: none; grid-column: 1 / -1; grid-row: 2; justify-self: center; width: 100%; max-width: 480px; }
+  html.search-open .search { display: flex; animation: pop .18s ease; }
   .search kbd { display: none; }
-  html:not(.fit) .page-outlet { padding: 132px 16px 120px; }
+  html:not(.fit) .page-outlet { padding: 80px 16px 120px; }
   /* HP: 5 menu sidebar, ikon saja, lebar rata */
   .tabbar { left: 16px; right: 16px; bottom: 14px; transform: none; justify-content: space-between; padding: 6px; background: rgba(246, 250, 253, .9); }
   .tab, .tab-extra { display: grid; place-items: center; position: relative; flex: 1; height: 46px; padding: 0; gap: 0; color: #5E6F88; }
