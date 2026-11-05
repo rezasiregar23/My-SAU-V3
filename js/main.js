@@ -28,7 +28,10 @@ function renderShell(r) {
        <button type="button" class="side-btn" data-action="todo" data-msg="InOffice belum dihubungkan" aria-label="InOffice">${icon('mail', 21)}</button>`;
   $('.side-help').innerHTML = icon('help', 21);
   const badges = { task: c.active, kalender: c.agendaToday };
-  $('#tabbar').innerHTML = navItems.map(([k, ic, label]) => `<a class="tab${r === k ? ' on' : ''}" href="#/${k}" ${r === k ? 'aria-current="page"' : ''}>${icon(ic, 18, 1.9)}<span>${label}</span>${badges[k] ? `<b class="tb-badge">${badges[k]}</b>` : ''}</a>`).join('');
+  // 3 tab di desktop; di HP tab bar memuat 5 menu sidebar dalam bentuk ikon saja
+  $('#tabbar').innerHTML = navItems.map(([k, ic, label]) => `<a class="tab${r === k ? ' on' : ''}" href="#/${k}" aria-label="${label}" ${r === k ? 'aria-current="page"' : ''}>${icon(ic, 18, 1.9)}<span>${label}</span>${badges[k] ? `<b class="tb-badge">${badges[k]}</b>` : ''}</a>`).join('')
+    + `<button type="button" class="tab tab-extra" data-action="todo" data-msg="Semua aplikasi SAU tersedia di Pintasan Aplikasi (Beranda)" aria-label="Semua aplikasi">${icon('grid', 18, 1.9)}</button>
+       <button type="button" class="tab tab-extra" data-action="todo" data-msg="InOffice belum dihubungkan" aria-label="InOffice">${icon('mail', 18, 1.9)}</button>`;
   $('#profileName').textContent = USER.name;
   $('#profileRole').textContent = `${USER.role} · ${USER.division}`;
 }
@@ -58,7 +61,7 @@ initSearch((r) => { location.hash = `#/${r}`; });
 $('#bellBtn').addEventListener('click', (e) => { e.stopPropagation(); renderNotifPop(); togglePop($('#notifPop'), e.currentTarget); });
 $('#profileBtn').addEventListener('click', (e) => { e.stopPropagation(); renderProfilePop(); togglePop($('#profilePop'), e.currentTarget); });
 document.addEventListener('click', (e) => {
-  const t = e.target.closest('.sidebar [data-action="todo"], .popover [data-action="todo"], .side-help');
+  const t = e.target.closest('.sidebar [data-action="todo"], .tabbar [data-action="todo"], .popover [data-action="todo"], .side-help');
   if (!t) return;
   closePop();
   toast(t.dataset.msg || 'Pusat bantuan: hubungi IT Service Desk');

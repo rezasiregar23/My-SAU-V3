@@ -182,6 +182,7 @@ kbd { font-family: inherit; font-size: 11px; font-weight: 600; color: var(--mute
 .tab { display: flex; align-items: center; gap: 9px; padding: 13px 22px 13px 20px; border-radius: 999px; color: #5E6F88; font-weight: 500; font-size: 14px; transition: background .2s, color .2s; }
 .tab:hover { color: var(--blue); }
 .tab.on { background: rgba(255, 255, 255, .95); color: var(--blue); font-weight: 600; box-shadow: 0 4px 12px rgba(100, 135, 165, .14); }
+.tab-extra { display: none; }
 .tb-badge { font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 999px; background: #DCE8F6; color: var(--blue); }
 
 /* ----------------------------------------------------------------- page grid */
@@ -714,8 +715,11 @@ select.fld-plain { cursor: pointer; width: auto; font-weight: 500; align-self: f
   .search { grid-column: 1 / -1; grid-row: 2; }
   .search kbd { display: none; }
   html:not(.fit) .page-outlet { padding: 132px 16px 120px; }
-  .tabbar { left: 50%; bottom: 14px; }
-  .tab { padding: 11px 14px; }
+  /* HP: 5 menu sidebar, ikon saja, lebar rata */
+  .tabbar { left: 16px; right: 16px; bottom: 14px; transform: none; justify-content: space-between; padding: 6px; }
+  .tab, .tab-extra { display: grid; place-items: center; position: relative; flex: 1; height: 46px; padding: 0; gap: 0; color: #5E6F88; }
+  .tab > span { display: none; }
+  .tab .tb-badge { position: absolute; top: 4px; left: calc(50% + 6px); padding: 0 5px; font-size: 9.5px; line-height: 15px; }
   .toast-wrap { left: 50%; width: calc(100% - 32px); }
   .greet h1 { font-size: 26px; }
   html:not(.fit) .focus-board { grid-template-columns: 1fr; justify-content: stretch; gap: 16px; min-height: 0; padding: 18px 0 0; }
